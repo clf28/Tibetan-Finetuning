@@ -1,0 +1,45 @@
+### model
+model_name_or_path: ../saves/qwen2.5-3b/full/cpt
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z2_config.json
+
+### dataset
+dataset: tibetan_sft_final
+template: qwen
+cutoff_len: 4096
+overwrite_cache: true
+preprocessing_num_workers: 128
+dataloader_num_workers: 4
+
+### output
+output_dir: ../saves/qwen2.5-3b/full/sft
+logging_steps: 10
+save_strategy: epoch
+plot_loss: true
+overwrite_output_dir: false
+save_only_model: false
+save_total_limit: 3
+report_to: tensorboard
+
+### train
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 2
+learning_rate: 1.0e-5
+num_train_epochs: 2
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+### eval
+val_size: 0.01
+per_device_eval_batch_size: 2
+eval_strategy: steps
+eval_steps: 30
+
