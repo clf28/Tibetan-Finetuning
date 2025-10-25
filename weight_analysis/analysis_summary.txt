@@ -1,0 +1,48 @@
+TIBETAN LANGUAGE FINETUNING - WEIGHT ANALYSIS SUMMARY
+============================================================
+
+CPT ANALYSIS:
+------------------------------
+Total layers analyzed: 435
+Mean change magnitude: 2.29e+00
+Median change magnitude: 8.91e-01
+Max change magnitude: 2.86e+01
+Total parameters affected: 3,397,103,616
+
+Top 5 changed layers:
+  1. lm_head.weight: 2.86e+01
+  2. model.embed_tokens.weight: 2.86e+01
+  3. model.layers.22.mlp.gate_proj.weight: 1.09e+01
+  4. model.layers.21.mlp.gate_proj.weight: 1.08e+01
+  5. model.layers.23.mlp.gate_proj.weight: 1.05e+01
+
+SFT ANALYSIS:
+------------------------------
+Total layers analyzed: 435
+Mean change magnitude: 2.33e+00
+Median change magnitude: 9.07e-01
+Max change magnitude: 3.01e+01
+Total parameters affected: 3,397,103,616
+
+Top 5 changed layers:
+  1. lm_head.weight: 3.01e+01
+  2. model.embed_tokens.weight: 3.01e+01
+  3. model.layers.22.mlp.gate_proj.weight: 1.10e+01
+  4. model.layers.21.mlp.gate_proj.weight: 1.09e+01
+  5. model.layers.23.mlp.gate_proj.weight: 1.06e+01
+
+CPT_TO_SFT ANALYSIS:
+------------------------------
+Total layers analyzed: 435
+Mean change magnitude: 3.58e-01
+Median change magnitude: 1.52e-01
+Max change magnitude: 4.07e+00
+Total parameters affected: 3,397,103,616
+
+Top 5 changed layers:
+  1. lm_head.weight: 4.07e+00
+  2. model.embed_tokens.weight: 4.07e+00
+  3. model.layers.25.mlp.gate_proj.weight: 1.24e+00
+  4. model.layers.26.mlp.gate_proj.weight: 1.23e+00
+  5. model.layers.24.mlp.gate_proj.weight: 1.23e+00
+
